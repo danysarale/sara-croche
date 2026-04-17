@@ -120,4 +120,4 @@ export const fallbackCards: CardOption[] = [
 ];
 
 // ─── WhatsApp ─────────────────────────────────────────────
-export const WHATSAPP_NUMBER = "33 98813-7539";
+export const WHATSAPP_NUMBER = "5533988137539";
