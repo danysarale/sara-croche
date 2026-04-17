@@ -1,26 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-bg: #FCFBFA;
+  --color-brand-rose: #D8A09B;
+  --color-brand-rose-dark: #C48E88;
+  --color-brand-rose-light: #E8C4BF;
+  --color-brand-rose-pale: #F5E6E3;
+  --color-brand-text: #4A4443;
+  --color-brand-text-light: #7A7170;
+  --color-brand-text-muted: #A39E9D;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Lato", system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  --shadow-soft: 0 2px 20px -4px rgba(74, 68, 67, 0.08);
+  --shadow-soft-md: 0 4px 30px -6px rgba(74, 68, 67, 0.1);
+  --shadow-soft-lg: 0 10px 50px -12px rgba(74, 68, 67, 0.12);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-brand-rose-pale);
+    color: var(--color-brand-text);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
