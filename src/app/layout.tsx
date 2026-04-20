@@ -10,6 +10,22 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "Sara Crochê",
   },
+  openGraph: {
+    title: "Sara Crochê — Miniaturas Exclusivas de Crochê",
+    description: "Ateliê de miniaturas de crochê feitas à mão com amor. Peças exclusivas para presentear quem você ama.",
+    url: "https://sara-croche.vercel.app",
+    siteName: "Sara Crochê",
+    images: [
+      {
+        url: "https://sara-croche.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sara Crochê - Miniaturas feitas à mão com amor",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export const viewport: Viewport = {
