@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 
+export const revalidate = 60; // revalida a cada 60 segundos
+
 export default async function Home() {
   const products = await getAllProducts().catch(() => []);
 

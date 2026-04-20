@@ -2,6 +2,8 @@ import { getProductBySlug, getPackagingOptions, getCardOptions } from "@/sanity/
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
 
+export const revalidate = 60;
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
